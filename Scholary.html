@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="scholarly-html-gh-pages/css/scholarly.min.css">
+    <script src="scholarly-html-gh-pages/js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="BlogPostAssets/images/icon.png" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Web Systems Development</div>
+      </div>
+      <h1>Scholarly HTML</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          <a href="https://github.com/pant3ras/WEB" target="_blank">Chile Liviu</a> 
+          &amp;
+          <a href="#">Tiplea Alexandru</a>
+
+        </dd>
+
+      </dl>
+    </div>
+    <section typeof="sa:Begining" id="Begining" role="doc-abstract">
+      <h2>Begining</h2>
+      <p>
+		Hi, we are Liviu and Alex, and we are trying to do an website that would help the backpackers
+		  that would travel around the globe!
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introduction</h2>
+      <p>
+		This site comes from the needed to document the main website 'World-GO!' that would come to help the backpackers
+		  that travel the world. This site will come with solution for the traveler (like hospitals/ hostels/ hotels/ houses/ restaurants and so on) 
+		  and would have places to 'what to visit' around the location of the traveler.
+      </p>
+		<p>
+		Also, we hope that our website will help more people, to go visit the Earth, because there are so many beautiful places to visit!
+			But, let's hope that you will find our website interactive, because we put our love and lot of coffee.
+		</p>
+      
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structure</h2>
+      <p>
+		The structure of our website will be prety basic. We will have a login/register page that would help the user to have all the information
+		  about him on that page.  </p> 
+		<p>Also, there will a page dedicat for the map, that would show the sorter route until the next destination of the traveler.</p>
+		<p> Another thing, will be the 'checklist' that would be found on the 'Places' tab. You can add the places that you want to visit, and your
+		map would update once you put a new location there. Once you visit one location, you can cross that location from places.</p>
+		<p>	
+		</p>
+     
+      <section id="Site">
+        <!-- review? -->
+        <h3>The site and the pages</h3>
+        <p>
+			The site will be coded in HTML, CSS, JS with a databases in postgreSQL and with a responsive template. The site can be checked <a href="home.html" target="_blank">HERE</a>
+        </p>
+        <p>
+			
+        </p>
+      </section>
+      <section id="MockUp">
+        <!-- review? -->
+        <h3>The mockup of the website</h3>
+        <p>
+Bellow you can find few images/mockup of our website.
+        </p>
+        <p>
+<img src="Front_page.jpg" alt="Front_page.jpg" height="300px" width="300px" />
+			<img src="maps.jpg" alt="Front_page.jpg" height="300px" width="300px" />
+			<img src="places.jpg" alt="Front_page.jpg" height="300px" width="300px" />
+        </p>
+
+      </section>
+      <section id="API">
+        <!-- review? -->
+        <h3>API used for this app</h3>
+        <p>
+We thought about using multiple api's for our application. Bellow you can find the name and the description of this api's.
+        </p>
+		  <ol>
+			  <li>Amadeus Points of Interest</li>
+			  <li>Sygic Routing API</li>
+			  <li>Housing Anywhere API</li>
+		  </ol>
+		       <h3>Extending the Amadeus for Developers travel lifecycle</h3>
+		  <p>One of the questions we hear more often from developers and innovators building travel applications is: “okay, once my customers have landed in their destinations, what else can I offer to them?”. I still remember a cool use case that a team suggested in one of the first Hackathons we organized. They wanted to offer a full end-to-end travel experience to their customers based on destination insights, such as the best restaurants or beaches in an area. Unfortunately, back then, we did not offer that type of data as part of our catalog…
+But that has just changed.
+</p>
+		  <p>We are excited to introduce a new API to our Self-Service catalog: Points of Interest API. This new API release is a result of our partnership with AVUXI. It provides information about the most popular places at any destination, such as restaurants, monuments, beaches, historical sites, nightlife spots or shopping facilities.
+The Points of Interest API relies on AVUXI’s GeoPopularity algorithm, which analyses and ranks geolocated data from more than 60 sources, including comments, photos, and reviews from millions of users
+</p>
+		  <h3>What’s new?</h3>
+		  <p>We have built two new endpoints following the same design guidelines followed by the rest of the existing APIs from the Self-Service catalog: Points of interest by radius and by square</p>
+		  
+	<h3>Points of interest</h3>
+		<h4> Points of Interest by radius</h4> 
+<p>
+The first endpoint supports only GET method and returns a list of points of interest for a given location - latitude and longitude - and a radius (1 km by default).
+The following sample returns a list of POIs for someone geolocated in Barcelona downtown: <code>
+GET https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude=41.397158&longitude=2.160873</code>
+In case we want to expand the area of search, we could use the radius parameter. In the following example, we increase the radius up to 3 kilometers:<code>
+GET https://test.api.amadeus.com/v1/reference-data/locations/pois?latitude-41.397158&longitude=2.160873&radius=3</code>
+</p>
+		  <h4>Points of Interest by a square
+</h4>
+The second endpoint works in a similar way to the radius-based endpoint: It supports also GET operations but it defines the area of search with a box: north, west, south, and east.
+The following example returns a list of points of interest for an area around Barcelona:<code>
+GET https://test.api.amadeus.com/v1/reference-data/locations/pois/by-square?north=41.397158&west=2.160873&south=
+41.394582&east=2.177181 </code>  
+Response
+For both endpoints you can expect the same response format: a list of locations with the following JSON structure:<code>
+{
+   "type": "location",
+   "subType": "POINT_OF_INTEREST",
+   "geoCode": {
+       "latitude": 41.39165,
+       "longitude": 2.164772
+   },
+   "name": "Casa Batlló",
+   "category": "SIGHTS",
+    "tags": [
+       "sightseeing",
+       "museum",
+       "sights",
+       "landmark"
+     ]
+ }</code>
+<h3>Your Travel route API</h3>
+		  <p>Sygic Routing API is a cloud-based service that calculates routes from one location to another. Sygic Maps comes with fast and reliable route planning algorithm based on everyday experience of more than 150 million drivers worldwide and with truck routing trusted by more than 750 000 truckers. </p>
+<p>Easy to implement API suits all your vehicles and use cases – local delivery zones, emission zones, heavy truck attributes, hazardous material restrictions, and many more but always with focus on road safety.
+ 	The simplest calculation can be done just by specifying both origin and destination defined by GPS coordinates and including a valid API key.
+Route calculation can be enhanced by using any of the parameters below:
+</p>
+	<ol>
+	<li>	Waypoints with time windows;</li>
+<li>	Avoid specific road types;</li>
+<li>	Avoid specific block of map defined by map selection;</li>
+<li>	Type of routing - request route alternatives (fastest, shortest, and the most economical);</li>
+<li>	There are different routing parameters taken into account for each different vehicle type. Supported types are car routing, truck routing, van, and bus routing;</li>
+<li>	Support for both imperial and metric units;</li>
+<li>	Limit the max speed of the vehicle and set departure time to make ETA more accurate;</li>
+<li>	Speed profiles represent usual traffic on roads at any given time of the day;</li>
+<li>	Set right or left turn preference.</li>
+
+		  
+	</ol>
+		  <p>Routing calculations can be currently done on TomTom, HERE and OSM data. Sygic Routing API uses the same routing algorithm including truck routing as the well known Sygic Professional navigation used by 150 millions drivers worldwide.
+The only difference is that all computing is done on the cloud which makes the calculation much faster. Routing API will produce the same route as Sygic Professional Navigation app.
+</p>
+	<h3>HousingAnywhere API</h3>
+		  <p>The HousingAnywhere API allows you to easily publish your listings on the largest rental accommodation platform globally. The API strongly advances data interoperability between HousingAnywhere and its partners. As property managers you can use the API to connect your inventory to the HousingAnywhere platform, enabling you to reach a far bigger target audience. Bookings take place on the HousingAnywhere platform and the API will ensure that partner systems are updated in real-time whenever one of your properties gets booked on the HousingAnywhere platform.</p>
+		  <h4>Publish Quality Listings</h4>
+		  <p>The HousingAnywhere API offers a range of possibilities. The API supplies a managed solution for storing and accessing property data such as media and listing details on HousingAnywhere.</p>
+		  <h4>Integrate with Property Management Systems</h4>
+		  <p>Connected property managers can store and access information regarding the pricing and availability of all their rental units. This information is updated based on a predetermined frequency as updates are pulled by the HA platform.</p>
+		  <h4>Bookings made easy</h4>
+		  <p>Webhooks enable two-way integrations to ensure that information is kept synchronized between HousingAnywhere and systems that are already being used by property managers. By using these webhooks, bookings and cancellations can automatically be confirmed as they happen, and availability calendars are updated on the fly.</p>
+      </section>
+ 
+  </body>
+</html>
