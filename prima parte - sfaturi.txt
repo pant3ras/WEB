@@ -1,0 +1,6 @@
+Sa ne gandim si la temperatura
+sa facem recomandari in functie de vreme.
+* responsive design
+* despre autoritati locale -> contact/engleza/translate
+
+!!! User health and user trip progress -> it's to be recomended!!!

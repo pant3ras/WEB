@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World-GO!</title>
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+  <script src="JS/todo.js" rel="javascript" type="text/javascript"></script>
+  <div id="header"> 
+    <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+    <div id="logo"><a href="home.html"><img src="BlogPostAssets/images/icon.png" alt="Logo" height="15%" width="15%"></a><p>Be safe in your trip around the world!</p></div>
+    <nav> <a href="about.html" title="About Us">About Us</a>
+        <a href="contact.html" title="Link">Contact</a>
+        <a href="maps.html" title="Link">Map</a>
+        <a href="todolist.html" title="Link">ToDo Places</a> 
+        <a href="weather.html" title="Link">Check the Weather!!</a> 
+        <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
+  </div>
+	<div class="mainwrapper">
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+
+    <section id="mainContent">    
+ <div id="todolist" class="header"> <span id="last">
+      <label for="start"> 
+      <h3>I want to add a date:</h3> 
+        
+       
+      <input type="date" id="start" name="start"
+       value="" onclick="todayDate()"
+       min="2020-01-01" max="2040-12-31">
+       <span onclick="newDate()" class="addBtn">Add Date!</span>
+      <h3 >Add your travel plan bellow:</h3>
+     
+     <!--test<span onclick="otherList()" class="addBtn">Add Date!</span>
+--> 
+      <br>
+    </label>
+
+  <input type="text" id="myInput" placeholder="Search for the location...">
+  <span onclick="newLocation()" class="addBtn">Add the location!</span>
+
+</div>
+
+<ul id="myUL">
+  <li class='checked'></li>
+</ul>
+
+
+</section>
+
+
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+      <input type="text" placeholder="Search">
+      <div id="adimage"></div> <!-- here should be an image. will thing about that image-->
+      <nav>
+        <ul>
+          <li><a href="#" title="Link">Weather</a></li>
+          <li><a href="#" title="Link">Locations</a></li>
+          <li><a href="#" title="Link">Google Maps</a></li>
+          <li><a href="#" title="Link">911</a></li>
+          <li><a href="#" title="Link">How dangerous is the next country?</a></li>
+          <li><a href="#" title="Link">Accomodations</a></li>
+        </ul>
+      </nav>
+    </section>
+  
+  </div>
+  
+</div>
+    <footer> 
+ 		<div id="footerbar">(C) Chile Liviu and Tiplea Alex for WEB - 2020</div>
+    </footer>
+</body>
+</html>

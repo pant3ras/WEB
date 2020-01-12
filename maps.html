@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World-GO!</title>
+<!--	<tags>project, infoiasi, websysdev, web</tags> -->
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+<link href="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true&amp;libraries=places"></link>
+<script href="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true&amp;libraries=places"></script>
+
+</head>
+
+<body>
+<script src="JS/maps.js"></script>
+  <div id="header"> 
+    <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+    <div id="logo"><a href="home.html"><img src="BlogPostAssets/images/icon.png" alt="Logo" height="15%" width="15%"></a><p>Be safe in your trip around the world!</p></div>
+    <nav> <a href="about.html" title="About Us">About Us</a>
+        <a href="contact.html" title="Link">Contact</a>
+        <a href="maps.html" title="Link">Map</a>
+        <a href="todolist.html" title="Link">ToDo Places</a> 
+        <a href="weather.html" title="Link">Check the Weather!!</a> 
+        <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
+  </div>
+	<div class="mainwrapper">
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+    <section id="mainContent"> 
+	
+      <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+      <h1>Welcome on Map functionality of the web pages!</h1>
+           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <div id="map-canvas"></div>
+			
+  <!--    <aside id="authorInfo"> -->
+        <!-- The author information is contained here -->
+    <!--     <h2>Author Name</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </aside> -->
+    </section>
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+      <input type="text" placeholder="Search">
+      <div id="adimage"></div> <!-- here should be an image. will thing about that image-->
+      <nav>
+        <ul>
+          <li><a href="#" title="Link">Weather</a></li>
+          <li><a href="#" title="Link">Locations</a></li>
+          <li><a href="#" title="Link">Google Maps</a></li>
+          <li><a href="#" title="Link">911</a></li>
+          <li><a href="#" title="Link">How dangerous is the next country?</a></li>
+          <li><a href="#" title="Link">Accomodations</a></li>
+        </ul>
+      </nav>
+    </section>
+  
+  </div>
+  
+</div>
+    <footer> 
+ 		<div id="footerbar">(C) Chile Liviu and Tiplea Alex for WEB - 2020</div>
+    </footer>
+</body>
+</html>

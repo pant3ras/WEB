@@ -1,61 +1,60 @@
 @charset "UTF-8";
 body {
-	background-image: url("../images/backpacker-insurance-bg1.jpg");
-	
-	background-position: top;
+	/*background-image: url("../images/backpacker-insurance-bg1.jpg");
+	background: radial-gradient(circle at 100%, #000, #333 40%, #e3e3e3 95%, #e2e2e2 50%);
+	radial-gradient(ellipse at top, #FF0000, transparent),
+	radial-gradient(ellipse at bottom, #4d9f0c, transparent);*/
+	background: #FFFEF1;
+	background-position: left;
 	
 }
 
- header {
+ #header {
 	/*Header */
-	background-color: #2B455E;
 	overflow: auto;
 	font-family: montserrat, sans-serif;
 	font-style: normal;
 	opacity: .8;
 	height: 90%;
 	max-height: 140px;
-	border-style: ridge;
-	border-color: bisque;
-	border-radius: 15%;
 	padding: 2px;
 	margin: auto;
 	margin-bottom: 10px;
 	max-width: 79%;
 	
 	}
- header #logo {
+ #header #logo {
 	/* Company Logo text */
 	width: 28%;
 	float: left;
 	padding-left: 2%;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	color: #F7E1B0;
+	color: #000000;
 	text-align: center;
 }
-header nav {
+#header nav {
 	/*Nav bar containing links in header */
 	text-align: right;
 	margin: auto;	
 	margin-top: 50px;
 	width: 68%;
 	float: left;
-	color: #F7E1B0;
+	color: #045280;
 	
 }
-header nav a {
+#header nav a {
 	/* Links in header */
 	padding-right: 2%;
 	font-size: 15px;
 	padding: 10px;
 }
 
-header nav a:hover {
-	background:#FEF9D3;
+#header nav a:hover {
+	background:#045280;
 	opacity: 0.9;
 	border-radius: 20%;
-	color:#045280;
+	color:#FEF9D3;
 	font-style: oblique;
 }
 #content #mainContent h1, #content #mainContent h2 {
@@ -63,7 +62,7 @@ header nav a:hover {
 	color: #FFFFFF;
 	font-size: 35px;
 	-webkit-text-stroke: 1px black; 
-	text-stroke: 2px black;
+	/*text-stroke: 2px black;*/
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
 #content #mainContent h3 {
@@ -72,14 +71,14 @@ header nav a:hover {
 	font-style: normal;
 	font-size: 20px;
 	color: #FFFFFF;
-}
+}/*
 #content {
 	background-color: #FFFEF1;
-	pading: 10%;
+	padding: 10%;
 	border-style: solid;
 	border-width: 1px;
 	
-}
+}*/
 
 #content p {
 	margin: 10px 10px 2px 10px;
@@ -143,7 +142,7 @@ footer article h3 {
 	float: left;
 	padding-right: 2%;
 	padding-top: 41px;
-	opacity: .5;
+	opacity: 1;
 	z-index: 100;
 }
 #content #sidebar {
@@ -153,7 +152,6 @@ footer article h3 {
 	padding-right: 2%;
 	float: left;
 	background-color:lavender;	
-	opacity: 1.5; 
 	margin-top: 150px;
 	padding-top: 32px;
 z-index: 5;
@@ -164,12 +162,13 @@ z-index: 5;
 	/* Container of all content */
 	width: 80%;
 	max-width: 79%;
+	height: 80%;
 	overflow: auto;
 	margin-left: 10%;
-	background: #FFF8E9;
+	background: #EFEFEF;
 	border-radius: 5%;
-	opacity: .7;
-	border-style:solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*--border-style:dashed;*/
 	z-index: 0;
 	}
 #content #sidebar input {
@@ -206,14 +205,20 @@ nav ul li a:hover {
 	/* Footer bar at the bottom of the page */
 	height: 18px;
 	clear: both;
-	background-color: rgba(208,207,207,1.00);
+
 	width: 100%;
+	margin: 0px auto 0px;
+
+	text-align: center;
+	font-display: fallback;
+	color: black;
 }
 footer {
 	/* Container for footer artices */
-	width: 71%;
+	width: 79%;
 	padding-left: 2%;
 	padding-right: 2%;
+	margin: 1% auto 0px;
 }
 .notOnDesktop {
 	/*element to be displayed only in mobile view and tabet view */
@@ -228,7 +233,7 @@ footer {
 	width: 100%;
 	float: left;
 }
-header nav a {
+#header nav a {
 	/* Links in header */
 	color: rgba(146,146,146,1.00);
 	text-decoration: none;
@@ -298,7 +303,7 @@ footer {
 	width: 100%;
 }
 
-
+}
 /* Mobile view */
 @media screen and (max-width:480px) {
 .mainwrapper header #logo {
@@ -350,4 +355,186 @@ footer {
 	/* Each foter article */
 	width: 96%;
 }
+}
+/*FOR TO-DO list*/
+/* Include the padding and border in an element's total width and height*/
+* {
+  box-sizing: border-box;
+} 
 
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+#myUL a{
+	color: #000000;
+	text-decoration: none;
+}
+
+input .start {
+	width: 100px;
+	height: 25px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2% 2%;
+  color: white;
+  text-align: left;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+
+/*html, body, */
+#map-canvas {
+	height: 500px;
+	width: 400px;
+	margin: 0px;
+	padding: 0px
+  }
+  .controls {
+	margin-top: 16px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  #pac-input {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin-left: 12px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 400px;
+  }
+
+  #pac-input:focus {
+	border-color: #4d90fe;
+  }
+
+  .pac-container {
+	font-family: Roboto;
+  }
+
+  #type-selector {
+	color: #fff;
+	background-color: #4d90fe;
+	padding: 5px 11px 0px 11px;
+  }
+
+  #type-selector label {
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+  }
+
+  #last {
+    overflow:auto;
+    display:block;
+}

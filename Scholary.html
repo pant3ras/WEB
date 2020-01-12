@@ -186,5 +186,44 @@ The only difference is that all computing is done on the cloud which makes the c
 		  <p>Webhooks enable two-way integrations to ensure that information is kept synchronized between HousingAnywhere and systems that are already being used by property managers. By using these webhooks, bookings and cancellations can automatically be confirmed as they happen, and availability calendars are updated on the fly.</p>
       </section>
  
+</section> 
+   <section id="Architecture">
+   <h1>second part of the project</h1>
+   <h2>Architecture</h2>
+   <p> In this chapter we will speak a little bit about the infrastracture of this website ( main modules, UML diagrams, input/output data formats, data/task flows.).
+   Starting with Main Modules. </p>
+   <h3>Main Modules</h3>
+   <p>From what we brain storm, we come up with 3 main modules (and after that, there may be some other auxiliar modules).</br>
+   <h4>'To Do places'</h4>
+   The first modules it's the one of <strong>'To do places'</strong>. A page where you can add a new travel, a new journey, with the exact objectives that you want to visit in that country.
+   You will have a search module where you can search of the objective/city you want to visit, and you can add that objective. As submodules of this main modules, we can have here a script that will show the weather for that day
+   a script that will recomend some places around that city, also the grad of pericol of that country/city and the numbers in case of urgencys.</p>
+   <h4>Direction Map</h4>
+   <p>As you travel a lot, you probabily will have no ideea how to get from point A in point B and then in point C and so one, until you will have only Mars to visit (hopefully will be reacheble). But for that,
+   you will have to complete the 'to do places' (or separatly go on the direction map tab, and do it in the hard way) and have to press 'generate' of the map. - here, as a submodule we can create some turistic atraction near you
+   and create a special direction map in order with what you want to use for transport (bike,walking,cars,public transportation).</p>
+ <h4>A health journal</h4>
+<p>Didn't give a lot of thought on this one, but mostly it should by like a to do list that you will put different health parameters in order to see (like BPM/weight etc) and if something isn't right, to alarm you or maybe 
+to recomend to visit a medic soon. Also, maybe this should be connected with a fitbit app or something similar throug an API.</p>
+   <H3> UML Diagram</h3>
+   <p>Next, we have the UML diagram (the main one):</p>
+   		<img src="UMLDiagram.PNG" alt="UmlDiagram" height="75%" width="75%" />
+   </section>
+   
+      <section id="TechRep">
+   <h2>What did we use?</h2>
+   <p>Describing the Web system internals (e.g., data structures/models, external data sources, submodules, etc.). Additionally, this document could explain the pragmatic use of external services (APIs) and/or data sources.</p>
+   </section>
+   
+      <section id="demo">
+   <h2>A video presentation of the webservice</h2>
+   
+   </section>
+      
+      <section id="prototype">
+   <h2>Last but not the last</h2>
+   
+   </section>
+
   </body>
 </html>

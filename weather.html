@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World-GO!</title>
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="header"> 
+    <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+    <div id="logo"><a href="home.html"><img src="BlogPostAssets/images/icon.png" alt="Logo" height="15%" width="15%"></a><p>Be safe in your trip around the world!</p></div>
+    <nav> <a href="about.html" title="About Us">About Us</a>
+        <a href="contact.html" title="Link">Contact</a>
+        <a href="maps.html" title="Link">Map</a>
+        <a href="todolist.html" title="Link">ToDo Places</a> 
+        <a href="weather.html" title="Link">Check the Weather!!</a> 
+        <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
+  </div>
+	<div class="mainwrapper">
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+
+<!--    <script src="JS/weather.js"></script>-->
+<div id="root"></div><section id="mainContent">    
+<h3>Weather in {0} will be like</h3>
+<input type="text" id="weatherLoc" placeholder="Search for the location...">
+<span onclick="locations()" class="addBtn">search</span>
+</div>
+<script src="JS/weather.js"></script> 
+</div>
+  
+</div>
+    <footer> 
+ 		<div id="footerbar">(C) Chile Liviu and Tiplea Alex for WEB - 2020</div>
+    </footer>
+
+
+</body>
+</html>
