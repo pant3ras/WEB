@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>World-GO!</title>
 <link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
-
+	
 </head>
 
 <body>
-<div id="header"> 
+  <script src="JS/todo.js" rel="javascript" type="text/javascript"></script>
+  <div id="header"> 
     <!--**************************************************************************
     Header starts here. It contains Logo and 3 navigation links. 
     ****************************************************************************-->
@@ -22,32 +23,35 @@
       <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
   </div>
 	<div class="mainwrapper">
-  <div id="content">
+  <div id="mainContent">
     <div class="notOnDesktop"> 
       <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
       <input type="text" placeholder="Search">
     </div>
 
-<!--    <script src="JS/weather.js"></script>-->
-<section id="mainContent">    
-<h3>Check the weather in the location you desire to visit bellow:</h3>
-<input type="text" id="weatherLoc" list="loadLocation" onkeydown="loadLocations()" placeholder="Search for the weather">
-<span onclick="locations()" class="addBtn">See Weather</span>
-<datalist id="loadLocation"></datalist>
-</div>
-<script src="JS/weather.js"></script> 
+      <!--  <section id="mainContent">    -->
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+ 
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div> 
 
-<!--<script src="JS/loadLocationforWeather.js"></script> -->
-</section>
-<div id="root"></div>
-
-</div>
+  </div>
   
 </div>
     <footer> 
  		<div id="footerbar">(C) Chile Liviu and Tiplea Alex for WEB - 2020</div>
     </footer>
-
-
 </body>
 </html>

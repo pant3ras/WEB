@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>World-GO!</title>
 <link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
-
+	
 </head>
 
 <body>
-<div id="header"> 
+  <script src="JS/todo.js"></script>
+  <div id="header"> 
     <!--**************************************************************************
     Header starts here. It contains Logo and 3 navigation links. 
     ****************************************************************************-->
@@ -22,32 +23,44 @@
       <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
   </div>
 	<div class="mainwrapper">
-  <div id="content">
+  <div id="mainContent">
     <div class="notOnDesktop"> 
       <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
       <input type="text" placeholder="Search">
     </div>
 
-<!--    <script src="JS/weather.js"></script>-->
-<section id="mainContent">    
-<h3>Check the weather in the location you desire to visit bellow:</h3>
-<input type="text" id="weatherLoc" list="loadLocation" onkeydown="loadLocations()" placeholder="Search for the weather">
-<span onclick="locations()" class="addBtn">See Weather</span>
-<datalist id="loadLocation"></datalist>
-</div>
-<script src="JS/weather.js"></script> 
+      <!--  <section id="mainContent">    -->
+ <div id="todolist" class="header">
+      <label for="start"> 
+    
+       
+      <h3 >Add your bpm bellow:</h3>
+     
+     <!--test<span onclick="otherList()" class="addBtn">Add Date!</span>
+--> 
+      <br>
+    </label>
 
-<!--<script src="JS/loadLocationforWeather.js"></script> -->
-</section>
-<div id="root"></div>
-
+  <input type="text" id="myInput" list="loadLocation" placeholder="Add bpm/or other medical data to be kept">
+  <span onclick="newLocation()" class="addBtn">Add data </span>
+  <datalist id="loadLocation"></datalist>
+  <script src="JS/apirequests.js"></script>
+    
 </div>
+<p> at some point will be an implementation with fitness apps.</p>
+<ul id="myUL">
+ 
+</ul>
+
+
+   <!-- </section> -->
+
+
+  </div>
   
 </div>
     <footer> 
  		<div id="footerbar">(C) Chile Liviu and Tiplea Alex for WEB - 2020</div>
     </footer>
-
-
 </body>
 </html>

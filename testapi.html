@@ -10,7 +10,39 @@
   </head>
 
   <body>
-    <div id="root"></div>
-    <script src="JS/apirequests.js"></script>
+   
+
+    
+  <div id="page-wrapper">
+    <h1>Datalist Element Demo</h1>
+    
+    <label for="default">Pick a programming language</label>
+    <input type="text" id="default" list="languages" placeholder="e.g. JavaScript">
+    
+    <datalist id="languages">
+      <option value="HTML">
+      <option value="CSS">
+      <option value="JavaScript">
+      <option value="Java">
+      <option value="Ruby">
+      <option value="PHP">
+      <option value="Go">
+      <option value="Erlang">
+      <option value="Python">
+      <option value="C">
+      <option value="C#">
+      <option value="C++">
+    </datalist>
+    
+    
+    <label for="ajax">Pick an HTML Element (options loaded using AJAX)</label>
+    <input type="text" id="ajax" list="json-datalist" placeholder="e.g. datalist" onkeydown="loadLocations()">
+    <datalist id="json-datalist"></datalist>
+  
+    <script src="js/loadLocation2.js"></script>
+  </div>
+
+  <div id="root"></div>
+  <script src="JS/apirequests.js"></script>
   </body>
 </html>

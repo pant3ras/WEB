@@ -188,7 +188,7 @@ The only difference is that all computing is done on the cloud which makes the c
  
 </section> 
    <section id="Architecture">
-   <h1>second part of the project</h1>
+
    <h2>Architecture</h2>
    <p> In this chapter we will speak a little bit about the infrastracture of this website ( main modules, UML diagrams, input/output data formats, data/task flows.).
    Starting with Main Modules. </p>
@@ -208,22 +208,95 @@ to recomend to visit a medic soon. Also, maybe this should be connected with a f
    <H3> UML Diagram</h3>
    <p>Next, we have the UML diagram (the main one):</p>
    		<img src="UMLDiagram.PNG" alt="UmlDiagram" height="75%" width="75%" />
-   </section>
+   <h3>Task an data flows</h3>
+   <p> in the next images, we will have the task and the data flows of the applications.</p>
+   <p>Task flows:</p>
+   <img src="task2.PNG" alt="UmlDiagram" height="50%" width="50%" />
+   <img src="task flow 1.PNG" alt="UmlDiagram" height="50%" width="50%" />.
+
+   <p>Data flows:</p>
+
+   <img src="datatask.PNG" alt="UmlDiagram" height="50%" width="50%" />
+   <img src="dataflow.PNG" alt="UmlDiagram" height="50%" width="50%" />
+
+   <p>Input/Output diagram:</p>
+
+   <img src="inputoutputmap.PNG" alt="UmlDiagram" height="50%" width="50%" />
+    </section>
+
    
       <section id="TechRep">
    <h2>What did we use?</h2>
-   <p>Describing the Web system internals (e.g., data structures/models, external data sources, submodules, etc.). Additionally, this document could explain the pragmatic use of external services (APIs) and/or data sources.</p>
+   <p>Ok, for this project, we use, as languages as it follows:
+     <li>HTML</li>
+     <li>CSS</li>
+     <li>Javascript</li>
+     <li>And a lot of coffee ;)</li>
+   </p>
+   <p>For the part of the functionalities, and API's we use as it follows:</p>
+     <p>For the part of weather and location, we use 2 api's from <a href="accuweather.com" target="_blank">AccuWeather</a> and the exact api's used are:
+    <li><a href="https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/autocomplete" target="_blank">Autocomplete search </a>-> from where we got the name of the location and the location id</li>
+  <li><a href="https://developer.accuweather.com/accuweather-forecast-api/apis/get/forecasts/v1/daily/1day/%7BlocationKey%7D" target="_blank">1 Day of Daily Forecasts</a> -> return a short text of the weater for the current day</li></p>
+   <p>Unfortunately, most of the API's were with pay, and the AccuWeather has a 50request limit per day. So that can make some problems on the load of the page if there was to many request on 
+     a single day. The solution is simple, just create a new webapp from the profile in the accuweather, but that will take time. </p>
+     <p>For the part of the map, we try to introduce a google map functionality, where the api's from google direction will calculate the distance and the route. Bad news were when we found
+       out that the that  API is with pas as you go, and we didn't want to use it so much.
+     </p>
    </section>
    
       <section id="demo">
-   <h2>A video presentation of the webservice</h2>
+   <h2>User Guide</h2>
+   <p> Our website it's straight to the point. <br>
+  What do I mean from that? Well our website has 4 big modules (Maps, ToDo Places, Check the weather and Health Data).
+For each of them we will present bellow the functionality and 'how to' (event if it's prety straight forward):
+
+</p>
+<h4>The first module 'MAP':</h4>
+<p><br>This module should get the location from 'ToDo' and create a personalized map with direction with the fastest route for you to get to your locations. Or to get to many tourist attraction
+  from the city you wish to visit.
+  <img src="BlogPostAssets/images/maps.png" height="75%" width="75%" /> <br>
+Unfortunately, this functionality of the website is still under progress, and hope to be here soon...</p>
    
-   </section>
+<h4>The second module 'ToDo Places'</h4>
+<p>In this module, you are allowed to add in a to do list the dates and the places you want to visit.
+  For example bellow snap:<br>
+  <img src="BlogPostAssets/images/todo.PNG" height="75%" width="75%" /> <br>
+  Here, we have a javascript that will get all the names from the world that will have the name as 'Ias'. As we dont have much request's/day, I put a condition when only 'Enter' is pressed,
+  then to show the store data.
+  Also, we didn't use any database (unfortunelly :( ). If we use a database, the fetch of the data would be much more easier.
+  Same as the Maps, this module is prety easy, you have 2 text fields, and when press 'add date' or 'add location' will add the location to a 'to do list'. Like in the image bellow:<br>
+  <img src="BlogPostAssets/images/todolist.PNG"height="75%" width="75%" /> .
+  
+</p>
+<p>
+  Also, within this module, you should check the weater to that location by pressing the 'see weather for this location' (not working yet. under development).
+  Also, you can remove the items by pressing the 'x' from the right side.
+</p>
+<h4>The third module 'Check the weather':</h4>
+<p> This module is easy, just check the location as in the 'to do list' and it will create 'cards' in the root of the page. It's prety easy. Just write the location in the text field, and press
+  'see weather', and the product will be like in the next image:<br> <img src="BlogPostAssets/images/weather.PNG" height="75%" width="75%" /> 
+</p>
+<h4>The last module 'Health data':</h4>
+<p> right now is just a to do list in where you can add different data about your health data. It's not much, didn't put much efort in this module, but in the future,
+  this module can be developed with api's from different fitness app (as fitbit, or garmin ). The website is stright forward a textbox and a add button where you will see the data. The image:
+  <br><img src="BlogPostAssets/images/health.PNG" height="75%" width="75%" /> 
+</p>
+<p>For our a demo version, for a video, at the moment we write this documentation, we remain without any requests for the API so, we could not make the video :( will do as fast as it will be 
+  available (if still necesary  :D :) ) but believe the images above, and the live demonstration!
+</p>
+</section>
       
       <section id="prototype">
-   <h2>Last but not the last</h2>
-   
-   </section>
+   <h2>Last but not the last - the demo/prototype</h2>
+   <p>And for the last section we left what is best, the demo of the prototype! We know is not much, but a lot of work was put in this much up, and god forbid if we still know how 
+     to process a nested JSON. Hope to understand at some point :) . But, for not much words anymore (i think we put a lot of words above), the live application can be found at <a href="http://web.cliviu.ro" target="_blank">cliviu.ro</a>
+     and the github link of the project can be found here: <a href="https://github.com/pant3ras/WEB">github</a>.
+
+    </p>
+<p>Hope we will pass the course and we really enjoy making this website!! Was interesting and difficult at the same time. <br>
+  Thank you! Liviu Chile & Alex Tiplea 
+</p>
+  </section>
 
   </body>
 </html>

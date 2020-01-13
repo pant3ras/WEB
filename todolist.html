@@ -15,22 +15,22 @@
     Header starts here. It contains Logo and 3 navigation links. 
     ****************************************************************************-->
     <div id="logo"><a href="home.html"><img src="BlogPostAssets/images/icon.png" alt="Logo" height="15%" width="15%"></a><p>Be safe in your trip around the world!</p></div>
-    <nav> <a href="about.html" title="About Us">About Us</a>
-        <a href="contact.html" title="Link">Contact</a>
-        <a href="maps.html" title="Link">Map</a>
-        <a href="todolist.html" title="Link">ToDo Places</a> 
-        <a href="weather.html" title="Link">Check the Weather!!</a> 
-        <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
+    <nav> <a href="contact.html" title="Link">Contact</a>
+      <a href="maps.html" title="Link">Map</a>
+      <a href="todolist.html" title="Link">ToDo Places</a> 
+      <a href="weather.html" title="Link">Check the Weather!!</a> 
+      <a href="medcare.html" title="Your health!">Health Data</a>
+      <a href="Scholary.html" title="Link">Scholar HTML</a></nav>
   </div>
 	<div class="mainwrapper">
-  <div id="content">
+  <div id="mainContent">
     <div class="notOnDesktop"> 
       <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
       <input type="text" placeholder="Search">
     </div>
 
-    <section id="mainContent">    
- <div id="todolist" class="header"> <span id="last">
+      <!--  <section id="mainContent">    -->
+ <div id="todolist" class="header">
       <label for="start"> 
       <h3>I want to add a date:</h3> 
         
@@ -46,37 +46,21 @@
       <br>
     </label>
 
-  <input type="text" id="myInput" placeholder="Search for the location...">
+  <input type="text" id="myInput" list="loadLocation" placeholder="Search for the location..." onkeydown="loadLocations()">
   <span onclick="newLocation()" class="addBtn">Add the location!</span>
+  <datalist id="loadLocation"></datalist>
+  <script src="JS/loadLocation.js"></script>
 
 </div>
 
 <ul id="myUL">
-  <li class='checked'></li>
+ 
 </ul>
 
 
-</section>
+   <!-- </section> -->
 
 
-    <section id="sidebar"> 
-      <!--************************************************************************
-    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
-    ****************************************************************************-->
-      <input type="text" placeholder="Search">
-      <div id="adimage"></div> <!-- here should be an image. will thing about that image-->
-      <nav>
-        <ul>
-          <li><a href="#" title="Link">Weather</a></li>
-          <li><a href="#" title="Link">Locations</a></li>
-          <li><a href="#" title="Link">Google Maps</a></li>
-          <li><a href="#" title="Link">911</a></li>
-          <li><a href="#" title="Link">How dangerous is the next country?</a></li>
-          <li><a href="#" title="Link">Accomodations</a></li>
-        </ul>
-      </nav>
-    </section>
-  
   </div>
   
 </div>

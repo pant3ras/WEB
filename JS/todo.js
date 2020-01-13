@@ -152,5 +152,3 @@ function otherList(){
     }
   })
 }
-//to get the checked on the element
-
